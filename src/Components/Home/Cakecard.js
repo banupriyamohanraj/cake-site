@@ -19,7 +19,7 @@ export default function Cakecard() {
         .then(res => {
             return res.json();
         }).then((data) => {
-      
+      console.log(data)
             setproductitem(data)
             productdata.setproductlist([data])
            
