@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useContext,useState } from "react";
 import ProductContext from "../Productcontext/Productcontext";
-import { useContext, useState } from "react/cjs/react.development";
+
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useHistory } from 'react-router-dom'
