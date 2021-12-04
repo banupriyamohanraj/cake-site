@@ -1,0 +1,14 @@
+#addAddressBtn {
+  background-color: rgb(236, 116, 156);
+  border-color: rgb(236, 116, 156);
+}
+
+#addAddressBtn:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+.Payment__Container {
+  margin: 10px;
+}

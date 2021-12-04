@@ -1,0 +1,14 @@
+#logintitle {
+  text-align: center;
+  align-items: center;
+}
+
+#login_btn:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+#login_btn {
+  background-color: rgb(236, 116, 156);
+  border-color: rgb(236, 116, 156);
+}

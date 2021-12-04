@@ -1,0 +1,9 @@
+#wishlist_addtocart:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+#wishlist_addtocart {
+  background-color: rgb(236, 116, 156);
+  border-color: rgb(236, 116, 156);
+}

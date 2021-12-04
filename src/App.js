@@ -1,25 +1,51 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Navbar from './Components/Navbar/Navbar'
+
+import Cakecard from "./Components/Home/Cakecard"
+import Wishlist from './Components/Wishlist/Wishlist';
+import Cart from './Components/Cart/Cart';
+import User from './Components/Account/User';
+// import Payment from './Components/Payment/Payment';
+import SearchbarResult from './Components/Searchbar/SearchbarResult';
+import { ProductProvider } from './Components/Productcontext/Productcontext';
+import Signup from './Components/Account/Signup/Signup';
+import ForgotPassword from './Components/Account/ForgotPassword/ForgotPassword';
+import PaymentSection from './Components/PaymentSection/PaymentSection';
+import Payment from './Components/Payment/Payment';
+import Resetpassword from './Components/Account/ResetPassword/Resetpassword';
+import ConfirmEmail from './Components/Account/ConfirmEmail/ConfirmEmail';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  return <>
+    <div id="wrapper">
+    <ProductProvider>
+      <Router>
+        <Navbar></Navbar>
+
+        
+        <Switch>
+        <Route path="/" component={Cakecard} exact={true}></Route>
+        <Route path="/wishlist" component={Wishlist} exact={true}></Route>
+        <Route path="/cart" component={Cart} exact={true}></Route>
+        <Route path="/account" component={User} exact={true}></Route>
+        <Route path="/paymentsection" component={PaymentSection} exact={true}></Route>
+        <Route path="/search" component={SearchbarResult} exact={true}></Route>
+        <Route path="/forgotpassword" component={ForgotPassword} exact={true}></Route>
+        <Route path="/registration" component={Signup} exact={true}></Route>
+        <Route path="/paymentsection/payment" component={Payment} excat={true}></Route>
+        <Route path="/confirm/:confirmationcode" component={ConfirmEmail} exact={true}></Route>
+    <Route path ='/resetpassword/:token' component={Resetpassword} exact = {true}></Route>
+        </Switch>
+      
+      </Router>
+      </ProductProvider>
+
+
+
+
     </div>
-  );
+  </>
 }
 
 export default App;

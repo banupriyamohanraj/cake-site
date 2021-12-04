@@ -1,0 +1,10 @@
+#signup_btn:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+#signup_btn {
+  background-color: rgb(236, 116, 156);
+  border-color: rgb(236, 116, 156);
+  color: black;
+}

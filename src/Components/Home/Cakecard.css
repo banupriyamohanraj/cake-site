@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap");
+
+.Cakecard_Container {
+  padding: 1px;
+  background-color: white;
+}
+
+#Cakecard__Home {
+  font-family: "EB Garamond", sans-serif;
+  font-size: large;
+  font-weight: 100;
+  border-color: ghostwhite;
+}
+/* .card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+} */
+
+#addToCartbtn:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+#addToCartbtn {
+  background-color: rgb(236, 116, 156);
+  border-color: rgb(236, 116, 156);
+}

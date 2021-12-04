@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap");
+.navbar {
+  background-color: rgb(236, 116, 156);
+  font-weight: 500;
+  color: black !important;
+  font-family: "Tangerine", cursive !important;
+  font-size: xx-large;
+}
+/* .navbar-brand {
+  font-family: "Tangerine", cursive !important;
+  font-size: xx-large;
+} */
+
+#navbarNav {
+  font-family: "EB Garamond", serif;
+  text-align: right;
+  display: flex;
+  align-items: flex-end;
+  float: right;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.5mm;
+  text-indent: 1ch;
+}
+
+.nav-link {
+  text-decoration: white;
+  color: white;
+}
+
+#navbtn {
+  background-color: rgb(236, 116, 156);
+  border-color: rgb(236, 116, 156);
+}
+
+#navbtn:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
