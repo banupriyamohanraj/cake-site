@@ -1,8 +1,8 @@
 import "./Cakecard.css"
-import { useContext, useEffect } from "react"
+import { useContext, useEffect,useState } from "react"
 import Searchbar from "../Searchbar/Searchbar";
 import ProductContext from "../Productcontext/Productcontext";
-import {  useState } from "react/cjs/react.development";
+
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
