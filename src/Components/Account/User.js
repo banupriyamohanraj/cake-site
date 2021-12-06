@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { useContext,useState } from "react"
 import ProductContext from "../Productcontext/Productcontext";
 import { useHistory } from 'react-router-dom'
-
+import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function User() {
 
@@ -13,7 +14,8 @@ export default function User() {
 
     let productdata = useContext(ProductContext);
     let history = useHistory();
-    
+    toast.configure()
+
     let UserSubmit = async (e) => {
         e.preventDefault()
         setloading(true)
@@ -35,12 +37,12 @@ export default function User() {
                 productdata.setuserlist(data.data)
                 // console.log(userData)
                 productdata.setuserLoggedIn(true)
-console.log(productdata.userLoggedIn)
+
                 //notifying user
                 let mesg = data.message
            
-                // toast(mesg, { position: toast.POSITION.TOP_CENTER })
-                alert(mesg)
+                toast(mesg, { position: toast.POSITION.TOP_CENTER })
+    
                if(productdata.checkout === false && mesg === "Login Sucessfull"){
                 history.push('/')
                }else if (productdata.checkout === true){

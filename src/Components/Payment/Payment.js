@@ -24,7 +24,7 @@ function Payment() {
   let[Expiry,setExpiry] = useState('');
   let [ CVV,setCVV] = useState('');
 
-
+  toast.configure()
 
   
   useEffect(() => {

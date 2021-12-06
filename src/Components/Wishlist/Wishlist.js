@@ -12,7 +12,7 @@ let[wishlist,setwishlist] = useState([]);
 let counter=1;
 
 let productdata = useContext(ProductContext);
-
+toast.configure()
 
 useEffect(()=>{
     async function fetchdata(){
@@ -122,7 +122,7 @@ return     <div class="card mb-3 shadow" style={{"max-width": "700px","height":"
 }) : <div class="jumbotron jumbotron-fluid">
 <div class="container">
 
-<p class="lead">No items in wishlist. Please go back to home to shop more</p>
+<p class="lead text-center">No items in wishlist. Please go back to home to shop more</p>
 </div>
 </div>
 

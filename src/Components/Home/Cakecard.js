@@ -11,6 +11,7 @@ export default function Cakecard() {
 
 
     let [productitem,setproductitem] = useState([])
+    toast.configure()
 
   useEffect(()=>{
     async function fetchdata(){
@@ -45,8 +46,8 @@ export default function Cakecard() {
             "content-type" : "application/json"
         }
     },[productdata])
-    alert(`${obj.title} is added to cart`)
-    // toast(`${obj.title} is added to cart`,{position: toast.POSITION.TOP_CENTER})
+    // alert(`${obj.title} is added to cart`)
+    toast(`${obj.title} is added to cart`,{position: toast.POSITION.TOP_CENTER})
     })
 
 
@@ -67,8 +68,8 @@ export default function Cakecard() {
             "content-type" : "application/json"
         }
     })
-    alert(`${obj.title} is added to wishlist`)
-    // toast(`${obj.title} is added to wishlist`,{position: toast.POSITION.TOP_CENTER})
+    // alert(`${obj.title} is added to wishlist`)
+    toast(`${obj.title} is added to wishlist`,{position: toast.POSITION.TOP_CENTER})
     })
 
 

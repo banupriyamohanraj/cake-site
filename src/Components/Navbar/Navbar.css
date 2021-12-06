@@ -29,13 +29,14 @@
   color: white;
 }
 
-#navbtn {
+.nav-item {
   background-color: rgb(236, 116, 156);
   border-color: rgb(236, 116, 156);
 }
 
-#navbtn:hover {
-  background-color: black;
+.nav-item:hover {
+  /* background-color: black; */
   color: white;
-  border-color: black;
+  transform: scale(1.09);
+  /* border-color: black; */
 }

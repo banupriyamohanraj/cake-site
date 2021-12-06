@@ -8,7 +8,7 @@ function ForgotPassword() {
 
     let [email, setemail] = useState('')
     let history = useHistory(); 
-
+    toast.configure()
     let UserSubmit = async (e) => {
         e.preventDefault()
 

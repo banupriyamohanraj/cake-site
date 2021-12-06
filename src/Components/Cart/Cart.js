@@ -15,7 +15,7 @@ export default function Cart(){
 
   
     let productdata = useContext(ProductContext);
- 
+    toast.configure()
 
 useEffect(() => {
   async function fetchdata(){
@@ -118,7 +118,7 @@ useEffect(() => {
       }) : <div class="jumbotron jumbotron-fluid ">
       <div class="container">
       
-        <p class="lead">No items in cart. Please go back to home to shop more</p>
+        <p class="lead text-center">No items in cart. Please go back to home to shop more</p>
       </div>
     </div>
        
