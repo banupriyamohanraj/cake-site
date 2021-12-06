@@ -18,12 +18,12 @@ import ConfirmEmail from './Components/Account/ConfirmEmail/ConfirmEmail';
 
 function App() {
   return <>
+  <Router> 
+
     <div id="wrapper">
     <ProductProvider>
-      <Router>
-        <Navbar></Navbar>
 
-        
+        <Navbar></Navbar>  
         <Switch>
         <Route path="/" component={Cakecard} exact={true}></Route>
         <Route path="/wishlist" component={Wishlist} exact={true}></Route>
@@ -35,16 +35,11 @@ function App() {
         <Route path="/registration" component={Signup} exact={true}></Route>
         <Route path="/paymentsection/payment" component={Payment} excat={true}></Route>
         <Route path="/confirm/:confirmationcode" component={ConfirmEmail} exact={true}></Route>
-    <Route path ='/resetpassword/:token' component={Resetpassword} exact = {true}></Route>
-        </Switch>
-      
-      </Router>
+        <Route path ='/resetpassword/:token' component={Resetpassword} exact = {true}></Route>
+        </Switch>  
       </ProductProvider>
-
-
-
-
     </div>
+    </Router>
   </>
 }
 
