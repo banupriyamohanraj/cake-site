@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Navbar from './Components/Navbar/Navbar'
-
+import OrderConfirmation from './Components/OrderConfirmation/OrderConfirmation';
 import Cakecard from "./Components/Home/Cakecard"
 import Wishlist from './Components/Wishlist/Wishlist';
 import Cart from './Components/Cart/Cart';
@@ -33,6 +33,7 @@ function App() {
         <Route path="/search" component={SearchbarResult} exact={true}></Route>
         <Route path="/forgotpassword" component={ForgotPassword} exact={true}></Route>
         <Route path="/registration" component={Signup} exact={true}></Route>
+        <Route path="/orderconfirmation" component={OrderConfirmation} exact={true}></Route>
         <Route path="/paymentsection/payment" component={Payment} excat={true}></Route>
         <Route path="/confirm/:confirmationcode" component={ConfirmEmail} exact={true}></Route>
         <Route path ='/resetpassword/:token' component={Resetpassword} exact = {true}></Route>

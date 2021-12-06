@@ -13,8 +13,9 @@ export const ProductProvider = ({children})=>{
     let[wishlist,setwishlist] = useState([])
     let[userlist,setuserlist] = useState([]);
     let[searchlist,setsearchlist] = useState([]);
-    let[userLoggedIn,setuserLoggedIn] = useState([]);
-    return <ProductContext.Provider value={{productlist,setproductlist,cartlist,setcartlist,Total,setTotal,wishlist,setwishlist,userlist,setuserlist,userLoggedIn,setuserLoggedIn,searchlist,setsearchlist}}>
+    let[userLoggedIn,setuserLoggedIn] = useState(false);
+    let[checkout,setcheckout] = useState(false);
+    return <ProductContext.Provider value={{productlist,setproductlist,cartlist,setcartlist,Total,setTotal,wishlist,setwishlist,userlist,setuserlist,userLoggedIn,setuserLoggedIn,searchlist,setsearchlist,checkout,setcheckout}}>
         {children}
     </ProductContext.Provider>
 }

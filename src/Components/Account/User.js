@@ -4,6 +4,7 @@ import { useContext,useState } from "react"
 import ProductContext from "../Productcontext/Productcontext";
 import { useHistory } from 'react-router-dom'
 
+
 export default function User() {
 
     let [email, setemail] = useState('');
@@ -34,13 +35,15 @@ export default function User() {
                 productdata.setuserlist(data.data)
                 // console.log(userData)
                 productdata.setuserLoggedIn(true)
-
+console.log(productdata.userLoggedIn)
                 //notifying user
                 let mesg = data.message
            
                 // toast(mesg, { position: toast.POSITION.TOP_CENTER })
                 alert(mesg)
-               if(mesg === "Login Sucessfull"){
+               if(productdata.checkout === false && mesg === "Login Sucessfull"){
+                history.push('/')
+               }else if (productdata.checkout === true){
                 history.push('/paymentsection')
                }
               

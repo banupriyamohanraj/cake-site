@@ -65,8 +65,21 @@ let AddressSubmit = async(e)=>{
 }
 
 let PaymentSubmit = ()=>{
-  alert("Order Placed") 
-  history.push('/')
+ 
+  async function fetchData() {
+    await fetch(
+      'https://jpcakes.herokuapp.com/cart/deleteall',
+      {
+        method: "DELETE",
+        headers: {
+          "content-type": "application/json",
+        },
+      }
+    );
+
+    }
+    fetchData();
+  history.push('/orderconfirmation')
 }
 
 
@@ -149,7 +162,7 @@ let PaymentSubmit = ()=>{
           </form>
         </div>
         <div className="col-6">
-          <h6>Payment Details</h6>
+          <h5>Payment Details</h5>
        
        
         <div class="row gx-3">
@@ -160,7 +173,7 @@ let PaymentSubmit = ()=>{
             </div>
             <div class="col-12">
                 <div class="d-flex flex-column">
-                    <p class="text mb-1">Card Number</p> <input class="form-control mb-3" type="text" placeholder="1234 5678 435678"  onChange={(e) => setCardnumber(e.target.value)} />
+                    <p class="text mb-1">Card Number</p> <input class="form-control mb-3" type="text" placeholder="1234 5678 4356"  onChange={(e) => setCardnumber(e.target.value)} />
                 </div>
             </div>
             <div class="col-6">
@@ -174,7 +187,7 @@ let PaymentSubmit = ()=>{
                 </div>
             </div>
             <div class="col-12">
-                <button class="btn btn-primary mb-3" onClick={()=>{
+                <button class="btn btn-primary mb-3" id="addAddressBtn" onClick={()=>{
                   (cardnumber && cardname && Expiry && CVV) ?  PaymentSubmit() : alert("Please provide payment information")
 
                  

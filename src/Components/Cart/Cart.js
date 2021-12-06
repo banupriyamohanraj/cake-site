@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function Cart(){
  
   let [cart,setcart] = useState([]);
+  // let[path,setpath] = useState('');
 
  let counter = 1;
   
@@ -63,7 +64,9 @@ useEffect(() => {
     }
 
 
-    
+   let checkout = ()=>{
+    productdata.setcheckout(true)
+   }
     
 
 
@@ -130,7 +133,7 @@ useEffect(() => {
   <h6>Total Amount - <strong><i class="fa fa-inr" aria-hidden="true"></i>  {total(cart)}</strong></h6>
     <h6>Total Products - {cart.length} </h6>
 
-  {  productdata.Total ? <Link to="/account"> <button type="button" className="btn" id="cart_btn"> PROCEED TO CHECKOUT</button></Link> : null}
+  {  productdata.Total ?( productdata.userLoggedIn ? <Link to="/paymentsection" ><button type="button" className="btn" id="cart_btn"> PROCEED TO CHECKOUT</button></Link> : <Link to="/account" ><button type="button" className="btn" id="cart_btn" onClick={checkout}> PROCEED TO CHECKOUT</button></Link>):null}
   </div>
 </div>
    </div>

@@ -19,7 +19,7 @@ export default function Cakecard() {
         .then(res => {
             return res.json();
         }).then((data) => {
-      console.log(data)
+    //   console.log(data)
             setproductitem(data)
             productdata.setproductlist([data])
            
@@ -45,8 +45,8 @@ export default function Cakecard() {
             "content-type" : "application/json"
         }
     },[productdata])
-    // alert(`${obj.title} is added to cart`)
-    toast(`${obj.title} is added to cart`,{position: toast.POSITION.TOP_CENTER})
+    alert(`${obj.title} is added to cart`)
+    // toast(`${obj.title} is added to cart`,{position: toast.POSITION.TOP_CENTER})
     })
 
 
@@ -67,8 +67,8 @@ export default function Cakecard() {
             "content-type" : "application/json"
         }
     })
-    // alert(`${obj.title} is added to wishlist`)
-    toast(`${obj.title} is added to wishlist`,{position: toast.POSITION.TOP_CENTER})
+    alert(`${obj.title} is added to wishlist`)
+    // toast(`${obj.title} is added to wishlist`,{position: toast.POSITION.TOP_CENTER})
     })
 
 
