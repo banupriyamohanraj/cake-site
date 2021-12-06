@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ProductContext from "../Productcontext/Productcontext";
 
 import {useContext, useEffect} from "react"
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 
 export default function Navbar() {
 
