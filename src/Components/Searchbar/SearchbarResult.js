@@ -21,7 +21,7 @@ const SearchbarResult = () => {
 
   let addToCart = ((obj) => {
     
-    fetch('https://jpcakes.herokuapp.com/cart/cartlist',{
+    fetch('https://jpcakes-backend.vercel.app/cart/cartlist',{
     method :"POST",
     body :JSON.stringify({
         itemid:obj.itemid,
@@ -41,7 +41,7 @@ alert(`${obj.title} is added to cart`)
 
 let addToWishlist = ((obj) => {
     
-  fetch('https://jpcakes.herokuapp.com/wish/wishlist',{
+  fetch('https://jpcakes-backend.vercel.app/wish/wishlist',{
   method :"POST",
   body :JSON.stringify({
       itemid:obj.itemid,

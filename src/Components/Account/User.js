@@ -19,7 +19,7 @@ export default function User() {
     let UserSubmit = async (e) => {
         e.preventDefault()
         setloading(true)
-        await fetch('https://jpcakes.herokuapp.com/auth/login', {
+        await fetch('https://jpcakes-backend.vercel.app/auth/login', {
             method: "POST",
             body: JSON.stringify({
                 email,

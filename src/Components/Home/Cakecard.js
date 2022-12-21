@@ -16,7 +16,7 @@ export default function Cakecard() {
   useEffect(()=>{
     async function fetchdata(){
          
-        await fetch('https://jpcakes.herokuapp.com/item/itemlist')
+        await fetch('https://jpcakes-backend.vercel.app/item/itemlist')
         .then(res => {
             return res.json();
         }).then((data) => {
@@ -33,7 +33,7 @@ export default function Cakecard() {
 
     let addToCart = ((obj) => {
     
-        fetch('https://jpcakes.herokuapp.com/cart/cartlist',{
+        fetch('https://jpcakes-backend.vercel.app/cart/cartlist',{
         method :"POST",
         body :JSON.stringify({
             itemid:obj.itemid,
@@ -55,7 +55,7 @@ export default function Cakecard() {
 
     let addToWishlist = ((obj) => {
     
-        fetch('https://jpcakes.herokuapp.com/wish/wishlist',{
+        fetch('https://jpcakes-backend.vercel.app/wish/wishlist',{
         method :"POST",
         body :JSON.stringify({
             itemid:obj.itemid,

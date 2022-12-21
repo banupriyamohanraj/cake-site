@@ -19,7 +19,7 @@ function Signup() {
     let status = "pending"
     let UserSubmit = async (e) => {
         e.preventDefault()
-        await fetch("https://jpcakes.herokuapp.com/auth/register", {
+        await fetch("https://jpcakes-backend.vercel.app/auth/register", {
             method: "POST",
             body: JSON.stringify({
              

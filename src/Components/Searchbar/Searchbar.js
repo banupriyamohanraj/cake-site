@@ -20,7 +20,7 @@ export default function Searchbar() {
     
     let filter = async()=>{
         
-        await fetch(`https://jpcakes.herokuapp.com/item/itemlist/${caketype}/${flavour}/${shape}/${tier}`)
+        await fetch(`https://jpcakes-backend.vercel.app/item/itemlist/${caketype}/${flavour}/${shape}/${tier}`)
         .then(res => {
             return res.json();
         }).then((data) => {

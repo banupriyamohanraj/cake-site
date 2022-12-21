@@ -37,7 +37,7 @@ function Payment() {
 let AddressSubmit = async(e)=>{
   e.preventDefault()
 
-        await fetch('https://jpcakes.herokuapp.com/user/updatingaddress', {
+        await fetch('https://jpcakes-backend.vercel.app/user/updatingaddress', {
             method: "PUT",
             body: JSON.stringify({
                email: user.email,city,state,zip,street
@@ -68,7 +68,7 @@ let PaymentSubmit = ()=>{
  
   async function fetchData() {
     await fetch(
-      'https://jpcakes.herokuapp.com/cart/deleteall',
+      'https://jpcakes-backend.vercel.app/cart/deleteall',
       {
         method: "DELETE",
         headers: {

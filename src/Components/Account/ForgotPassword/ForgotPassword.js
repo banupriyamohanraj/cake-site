@@ -12,7 +12,7 @@ function ForgotPassword() {
     let UserSubmit = async (e) => {
         e.preventDefault()
 
-        await fetch('https://jpcakes.herokuapp.com/auth/passwordreset', {
+        await fetch('https://jpcakes-backend.vercel.app/auth/passwordreset', {
             method: "PUT",
             body: JSON.stringify({
                 email

@@ -14,7 +14,7 @@ export default function Resetpassword(props) {
     let history = useHistory();
     let UserSubmit = async (e) => {
         e.preventDefault()
-         await fetch("https://jpcakes.herokuapp.com/auth/newpassword", {
+         await fetch("https://jpcakes-backend.vercel.app/auth/newpassword", {
             method: "POST",
             body: JSON.stringify({
                 password, token

@@ -20,7 +20,7 @@ export default function Cart(){
 useEffect(() => {
   async function fetchdata(){
    
-      await fetch('https://jpcakes.herokuapp.com/cart/cartlist')
+      await fetch('https://jpcakes-backend.vercel.app/cart/cartlist')
       .then(res => {
           return res.json();
       }).then((data) => {
@@ -50,7 +50,7 @@ useEffect(() => {
     let removeCart = async(item) => {
 
       await fetch(
-        `https://jpcakes.herokuapp.com/cart/delete/${item._id}`,
+        `https://jpcakes-backend.vercel.app/cart/delete/${item._id}`,
         {
           method: "DELETE",
           headers: {

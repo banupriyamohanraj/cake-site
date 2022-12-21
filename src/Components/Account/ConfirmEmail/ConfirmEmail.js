@@ -15,7 +15,7 @@ export default function ConfirmEmail(props){
     })
 
    const confirm =()=>{
-    fetch("https://jpcakes.herokuapp.com/auth/confirm",{
+    fetch("https://jpcakes-backend.vercel.app/auth/confirm",{
         method: "PUT",
         body: JSON.stringify({
             status,confirmationcode
