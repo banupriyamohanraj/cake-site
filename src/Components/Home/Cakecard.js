@@ -28,7 +28,7 @@ export default function Cakecard() {
     }
   
     fetchdata();
-  },[])
+  },[productdata])
  
 
     let addToCart = ((obj) => {
