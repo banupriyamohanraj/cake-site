@@ -3,7 +3,7 @@ import "./Footer.css"
 function Footer() {
   return (
     <div className="Footer_Container">
-   <h1 className="Footer m-0">Footer</h1>
+   <h1 className="Footer m-0">JP Cakes Footer</h1>
     </div>
   )
 }
